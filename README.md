@@ -1,34 +1,245 @@
-# React Advanced To-Do Application
+# 📝 React Advanced To-Do Application
 
-A modern, highly responsive React application built with TypeScript and Vite. This app features a clean user interface that supports full CRUD task management and dynamic light/dark mode switching.
-
----
-
-## 🚀 Features
-
-### Current Features
-* **Full CRUD Operations**: Seamlessly add, view, edit, toggle, and delete tasks.
-* **Theme Switching**: Dynamic toggle between Light Mode and Dark Mode.
-* **Task Analytics**: Real-time task counting footer displaying total active tasks.
-* **Strict Code Quality**: Pre-configured with TypeScript, ESLint, and Prettier.
-
-### Upcoming Roadmap
-* 🗓️ **Tabbed Timeframe Logs**: Separate designated tabs to track logs for **Yesterday**, **Today**, and **Tomorrow**.
-* 🔐 **User Authentication**: Secure user-based account setups and session management.
-* 🌐 **Backend Connectivity**: Persistent data synchronization via RESTful APIs/Websockets.
-* 🤖 **AI Agent Integration**: Autonomous background processes to categorize, prioritize, and automate task management.
+A modern, responsive **React + TypeScript + Vite** To-Do application featuring full CRUD operations, light/dark mode support, and a clean user interface.
 
 ---
 
-## 🛠️ Scripts & Code Quality Optimization
+## 📸 Application Preview
 
-To integrate Prettier formatting smoothly into your workflow, update your `package.json` scripts section to the following:
+### ☀️ Light Mode
+> *(Add your Light Mode screenshot here)*
 
-```json
-"scripts": {
-  "dev": "vite",
-  "build": "npm run format && tsc -b && vite build",
-  "lint": "eslint .",
-  "preview": "vite preview",
-  "format": "prettier --write \"src/**/*.{js,jsx,ts,tsx,css,md}\""
-}
+### 🌙 Dark Mode
+> *(Add your Dark Mode screenshot here)*
+
+---
+
+## ✨ Features
+
+### ✅ Current Features
+
+- ➕ Add new tasks
+- ✏️ Edit existing tasks
+- ❌ Delete tasks
+- ✔️ Mark tasks as completed
+- ⭐ Mark tasks as important
+- 🌙 Toggle between Light and Dark themes
+- 📊 Live task counter
+- 💻 Responsive UI
+- 🔍 Built with TypeScript for type safety
+
+---
+
+## 🚀 Application Usage
+
+### Adding a Task
+1. Enter a task in the input field.
+2. Click **Add**.
+3. The task will appear in the task list.
+
+### Completing a Task
+- Click the circle beside a task.
+- Completed tasks are displayed with a strike-through.
+
+### Editing a Task
+- Click the **Edit (✏️)** icon.
+- Update the task.
+- Save the changes.
+
+### Deleting a Task
+- Click the **Delete (🗑️)** icon.
+
+### Marking Important
+- Click the **Star (⭐)** icon.
+- Important tasks are highlighted.
+
+### Switching Theme
+- Click the theme toggle button in the top-right corner.
+- Switch seamlessly between **Light** and **Dark** modes.
+
+---
+
+# 🛠️ Tech Stack
+
+- React
+- TypeScript
+- Vite
+- CSS3
+- ESLint
+- Prettier
+
+---
+
+# 📦 Prerequisites
+
+Before running the project, make sure you have installed:
+
+- Node.js (v18 or above recommended)
+- npm (comes with Node.js)
+
+Verify installation:
+
+```bash
+node -v
+npm -v
+```
+
+---
+
+# 📥 Clone the Repository
+
+```bash
+git clone https://github.com/<your-username>/<repository-name>.git
+```
+
+Navigate into the project:
+
+```bash
+cd <repository-name>
+```
+
+---
+
+# 📦 Install Dependencies
+
+```bash
+npm install
+```
+
+---
+
+# ▶️ Run the Development Server
+
+```bash
+npm run dev
+```
+
+The application will be available at:
+
+```
+http://localhost:5173
+```
+
+---
+
+# 🏗️ Build for Production
+
+```bash
+npm run build
+```
+
+This command:
+
+- Formats the source code
+- Compiles TypeScript
+- Creates an optimized production build
+
+The generated files will be available in the `dist/` directory.
+
+---
+
+# 👀 Preview the Production Build
+
+```bash
+npm run preview
+```
+
+---
+
+# 🧹 Lint the Code
+
+```bash
+npm run lint
+```
+
+---
+
+# 🎨 Format the Code
+
+```bash
+npm run format
+```
+
+---
+
+# 🧪 Running Tests
+
+If you have not configured a testing framework yet:
+
+```text
+Tests are not configured yet.
+```
+
+Once Vitest or Jest is added, this section can be updated to:
+
+```bash
+npm test
+```
+
+or
+
+```bash
+npm run test
+```
+
+---
+
+# 📂 Project Structure
+
+```
+src/
+│
+├── assets/
+├── components/
+├── hooks/
+├── styles/
+├── App.tsx
+├── main.tsx
+└── ...
+```
+
+---
+
+# 🛣️ Roadmap
+
+- 🗓️ Yesterday / Today / Tomorrow tabs
+- 🔐 User Authentication
+- 🌐 Backend API Integration
+- ☁️ Persistent Storage
+- 🤖 AI Task Categorization
+- 🔔 Notifications & Reminders
+- 📱 PWA Support
+
+---
+
+# 📜 Available Scripts
+
+| Command | Description |
+|----------|-------------|
+| `npm run dev` | Start development server |
+| `npm run build` | Format, compile and build production bundle |
+| `npm run preview` | Preview production build locally |
+| `npm run lint` | Run ESLint |
+| `npm run format` | Format source files with Prettier |
+
+---
+
+# 🤝 Contributing
+
+Contributions, issues, and feature requests are welcome.
+
+1. Fork the repository.
+2. Create a feature branch.
+3. Commit your changes.
+4. Push the branch.
+5. Open a Pull Request.
+
+---
+
+# 📄 License
+
+This project is licensed under the Self License.
+
+---
+
+Made with ❤️ using React + TypeScript + Vite.
