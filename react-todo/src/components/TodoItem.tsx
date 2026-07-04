@@ -34,7 +34,6 @@ export const TodoItem: React.FC<TodoItemProps> = ({
   return (
     <div className="flex items-center justify-between py-3 border-b border-slate-100 last:border-0">
       <div className="flex items-center space-x-4 flex-1 min-w-0">
-        {/* Tailwind-driven Circular Checkbox */}
         <button
           onClick={() => onToggle(todo.id)}
           className={`h-6 w-6 rounded-full border-2 flex items-center justify-center shrink-0 transition-all ${
@@ -58,7 +57,7 @@ export const TodoItem: React.FC<TodoItemProps> = ({
             />
           ) : (
             <span
-              className={`text-base text-slate-700 font-normal truncate ${todo.isCompleted ? 'line-through text-slate-400' : ''}`}
+              className={`text-base text-main font-normal truncate ${todo.isCompleted ? 'line-through opacity-40' : ''}`}
             >
               {todo.title}
             </span>
@@ -75,7 +74,6 @@ export const TodoItem: React.FC<TodoItemProps> = ({
         </div>
       </div>
 
-      {/* Tailwind-driven Control Actions Group */}
       <div className="flex items-center space-x-3 ml-4 shrink-0">
         {isEditing ? (
           <>

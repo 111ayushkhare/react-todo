@@ -9,32 +9,24 @@ export const TodoInput: React.FC<TodoInputProps> = ({ onAdd }) => {
 
   const handleSubmit = (e: React.SubmitEvent<HTMLFormElement>) => {
     e.preventDefault();
-
-    if (!title.trim()) {
-      return;
+    if (title.trim()) {
+      onAdd(title.trim());
+      setTitle('');
     }
-
-    onAdd(title);
-    setTitle('');
   };
 
   return (
-    <form
-      onSubmit={handleSubmit}
-      className="flex items-center bg-slate-100 rounded-full p-1 pl-5 mb-6 focus-within:ring-2 focus-within:ring-orange-500/20 transition-all"
-    >
+    <form onSubmit={handleSubmit} className="flex items-center gap-3 mb-6">
       <input
-        type="text"
-        placeholder="add your task here"
+        type="title"
         value={title}
-        onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
-          setTitle(e.target.value)
-        }
-        className="w-full bg-transparent border-none text-slate-700 placeholder-slate-400 focus:outline-none text-[15px]"
+        onChange={(e) => setTitle(e.target.value)}
+        placeholder="add your task here"
+        className="flex-1 px-5 py-3 rounded-2xl bg-input-bg text-main placeholder-muted border border-border-line focus:outline-none focus:ring-2 focus:ring-brand-orange/50 transition-all duration-200"
       />
       <button
         type="submit"
-        className="bg-[#EF5A3F] text-white font-medium px-8 py-3 rounded-full hover:bg-[#db4f36] transition-colors shadow-sm"
+        className="px-6 py-3 bg-brand-orange text-white font-semibold rounded-2xl hover:opacity-90 active:scale-95 transition-all cursor-pointer"
       >
         Add
       </button>

@@ -1,1 +1,29 @@
 @import 'tailwindcss';
+
+@theme {
+  /* Clean Light Mode Spectrum */
+  --color-app-bg: #f8fafc;
+  --color-card-bg: #ffffff;
+  --color-input-bg: #f1f5f9;
+  --color-main: #0f172a; /* Dark slate for bright backgrounds */
+  --color-muted: #64748b; /* Neutral slate */
+  --color-border-line: #e2e8f0;
+  --color-brand-orange: #ef5a3f;
+  --color-brand-star: #eab308;
+}
+
+@variant dark (&:where(.dark, .dark *));
+
+.dark {
+  /* High-Contrast Premium Dark Mode Spectrum */
+  --color-app-bg: #090d16;
+  --color-card-bg: #111827;
+  --color-input-bg: #1f2937;
+  --color-main: #f3f4f6; /* Crisp off-white text for dark cards */
+  --color-muted: #9ca3af; /* Bright gray for readable secondary items/placeholders */
+  --color-border-line: #374151;
+}
+
+body {
+  @apply bg-app-bg text-main transition-colors duration-200 antialiased;
+}
