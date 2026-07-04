@@ -1,75 +1,34 @@
-# React + TypeScript + Vite
+# React Advanced To-Do Application
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern, highly responsive React application built with TypeScript and Vite. This app features a clean user interface that supports full CRUD task management and dynamic light/dark mode switching.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## 🚀 Features
 
-## React Compiler
+### Current Features
+* **Full CRUD Operations**: Seamlessly add, view, edit, toggle, and delete tasks.
+* **Theme Switching**: Dynamic toggle between Light Mode and Dark Mode.
+* **Task Analytics**: Real-time task counting footer displaying total active tasks.
+* **Strict Code Quality**: Pre-configured with TypeScript, ESLint, and Prettier.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+### Upcoming Roadmap
+* 🗓️ **Tabbed Timeframe Logs**: Separate designated tabs to track logs for **Yesterday**, **Today**, and **Tomorrow**.
+* 🔐 **User Authentication**: Secure user-based account setups and session management.
+* 🌐 **Backend Connectivity**: Persistent data synchronization via RESTful APIs/Websockets.
+* 🤖 **AI Agent Integration**: Autonomous background processes to categorize, prioritize, and automate task management.
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## 🛠️ Scripts & Code Quality Optimization
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+To integrate Prettier formatting smoothly into your workflow, update your `package.json` scripts section to the following:
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
-
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-
-```
-
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
-
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-
-```
+```json
+"scripts": {
+  "dev": "vite",
+  "build": "npm run format && tsc -b && vite build",
+  "lint": "eslint .",
+  "preview": "vite preview",
+  "format": "prettier --write \"src/**/*.{js,jsx,ts,tsx,css,md}\""
+}
